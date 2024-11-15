@@ -13,4 +13,4 @@ The obective of this proect is to create small mini funny flash games by creatin
 
 #Technologies used
 Python:The programming language for data analysis
-Vs code: IDLE
+Vs code: IDE
