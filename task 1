@@ -1,0 +1,49 @@
+# Simple Quiz Game
+
+def quiz_game():
+    questions = [
+        {
+            "question": "What is the capital of France?",
+            "options": ["A) Berlin", "B) Madrid", "C) Paris", "D) Rome"],
+            "answer": "C"
+        },
+        {
+            "question": "What is 2 + 2?",
+            "options": ["A) 3", "B) 4", "C) 5", "D) 6"],
+            "answer": "B"
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": ["A) Earth", "B) Mars", "C) Jupiter", "D) Venus"],
+            "answer": "B"
+        }
+    ]
+
+    score = 0
+
+    print("Welcome to the Quiz Game!")
+    print("--------------------------")
+
+    for q in questions:
+        print(q["question"])
+        for option in q["options"]:
+            print(option)
+        
+        user_answer = input("Your answer (A/B/C/D): ").upper()
+
+        if user_answer == q["answer"]:
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer is {q['answer']}.\n")
+
+    print(f"Your final score is {score}/{len(questions)}")
+    if score == len(questions):
+        print("Excellent job!")
+    elif score >= len(questions) / 2:
+        print("Good effort!")
+    else:
+        print("Better luck next time!")
+
+if __name__ == "__main__":
+    quiz_game()
